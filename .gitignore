@@ -9,3 +9,6 @@ tmp/
 coverage*
 *.swp
 pkg/
+public/uploads
+public/assets
+public/admin

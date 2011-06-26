@@ -14,8 +14,11 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl'
   gem 'cover_me'
-  gem 'webrat'
+  gem 'webrat', require: false
+  gem 'capybara'
   gem 'cucumber'
   gem 'cucumber-rails'
+  gem 'capybara', require: false
+  gem 'launchy'
   # gem 'ruby-debug19'
 end
