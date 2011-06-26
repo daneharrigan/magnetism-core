@@ -3,6 +3,7 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'factory_girl'
+require 'webrat'
 
 Dir[Magnetism.root + "/spec/support/**/*.rb"].each   { |f| require File.expand_path(f) }
 Dir[Magnetism.root + "/spec/factories/**/*.rb"].each { |f| require File.expand_path(f) }

@@ -23,3 +23,7 @@ Release 0.x
   Make more awesome?
   Codemirror
   Allow template editing outside of the browser
+
+General Todos:
+  Swap Factory_girl with Machinist
+  Buildout Cucumber features

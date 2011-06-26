@@ -10,6 +10,12 @@ module NavigationHelpers
 
     when /^the home\s?page$/
       '/'
+    when /the new site page/
+      new_site_path
+    when /the new user_session page/
+      new_user_session_path
+    when /the latest admin_manage_theme page/
+      admin_manage_theme_path(Theme.last)
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

@@ -5,6 +5,11 @@
 # files.
 
 require 'cucumber/rails'
+require 'capybara/cucumber'
+require 'factory_girl'
+
+Dir[Magnetism.root + "/spec/support/**/*.rb"].each   { |f| require File.expand_path(f) }
+Dir[Magnetism.root + "/spec/factories/**/*.rb"].each { |f| require File.expand_path(f) }
 
 # Capybara defaults to XPath selectors rather than Webrat's default of CSS3. In
 # order to ease the transition to Capybara we set the default here. If you'd
