@@ -1,0 +1,7 @@
+%li{ :id => "theme-#{theme.id}", :class => 'item' }
+  = link_to theme.name, admin_manage_theme_path(theme)
+  .actions
+    - if theme.sites.empty?
+      = link_to 'Delete Theme', admin_manage_theme_path(theme, :format => :js), :class => :delete
+      |
+    = link_to 'Change Theme Name', edit_admin_manage_theme_path(theme), :remote => true, :method => :get, 'data-type' => :html

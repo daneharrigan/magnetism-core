@@ -1,0 +1,29 @@
+Release: 0.1
+  User management
+    Permissisons/Roles
+    Edit form needs some love
+  Multiple site support
+  Page caching (eg: static files, varnish)
+  Blog component
+    Comments (scan with defenseo)
+      Comment Liquid Tag
+    Trackbacks
+  Make sure all success AND failure controller responses are spec'd
+
+Release 0.2
+  Asset manager
+  Sass templates
+  Support multiple markups (eg: textile, markdown)
+  i18n
+  Allow usage of Haml in templates
+
+Release 0.x
+  Non-evaluating Haml templates
+  Add git integration to allow for updating templates remotely
+  Make more awesome?
+  Codemirror
+  Allow template editing outside of the browser
+
+General Todos:
+  Swap Factory_girl with Machinist
+  Buildout Cucumber features

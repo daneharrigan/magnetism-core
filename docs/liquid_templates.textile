@@ -1,0 +1,44 @@
+h1. Liquid Templates
+
+h2. Available Drops
+
+# site
+# navigation
+# page
+# parent
+# homepage
+
+h3. Site Methods
+
+# name
+# homepage
+
+h3. Navigation
+
+This is an array of top level page drops
+
+h3. Page Methods
+
+# title
+# publish_at
+# permalink
+# data
+# subpages
+
+
+h2. Available Tags
+
+# snippet
+# comment_for
+
+h3. comment_for
+
+comment_for page do |c|
+  c.name <all args looked at as tag attributes. exclude "name">
+  c.email <all args looked at as tag attributes. exclude "name">
+  c.message <all args looked at as tag attributes. exclude "name">
+endcomment_for
+
+h2. Available Filters
+
+# textile

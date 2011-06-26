@@ -1,0 +1,29 @@
+%h2 Edit Page
+= form_for [:admin, resource], :html => {:id => 'page-form', :multipart => true} do |f|
+  .large-title
+    = f.label :title, 'Page Title'
+    = f.text_field :title
+  %p#permalink<
+    = "http://#{current_site.domain}"
+    = editable_permalink(resource)
+  - if resource.blog_entry?
+    = render :partial => 'blog', :locals => { :f => f, :resource => resource }
+  - if resource.template_id? && !resource.fields.empty?
+    %ol.fields
+      = render :partial => 'admin/fields/item', :collection => resource.template.fields, :as => :field
+  #publish
+    %p
+      = f.label :publish
+      = f.check_box :publish
+    %p
+      = f.label :publish_at
+      = f.date_select :publish_at
+  - if resource.blog_entry?
+    .options
+      %p
+        = f.label :close_comments
+        = f.check_box :close_comments
+  .actions
+    .action-buttons
+      = link_to 'Back to Pages', admin_pages_path
+      = f.submit

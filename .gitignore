@@ -1,0 +1,14 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+.sass-cache/
+.rvmrc
+.rspec
+*.tmproj
+coverage*
+*.swp
+pkg/
+public/uploads
+public/assets
+public/admin

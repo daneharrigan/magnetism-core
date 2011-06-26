@@ -1,0 +1,26 @@
+%h2
+  = defined?(title) ? title : "New Page"
+  - if parent_page
+    = "Under #{parent_page.title}"
+= form_for [:admin, resource] do |f|
+  .large-title
+    = f.label :title, 'Page Title'
+    = f.text_field :title
+  - unless parent_page.try(:blog_section?)
+    %ol.fields
+      %li.checkbox
+        = f.check_box :blog_section
+        = f.label :blog_section, 'Is this a blog?'
+      %li#template-selector
+        = f.label :template_id
+        = f.select :template_id, options_from_collection_for_select(template_collection, :id, :name)
+      %li#template-set-selector
+        = f.label :template_set_id, 'Blog Template'
+        = f.select :template_set_id, options_from_collection_for_select(template_set_collection, :id, :name), {}, :disabled => true
+    %fieldset#advanced
+      = f.hidden_field :uri_format, :value => ':year/:month/:slug', :disabled => true
+  .actions
+    = link_to 'Cancel', '#cancel', :class => 'cancel'
+    = f.submit
+    - if parent_page
+      = f.hidden_field :parent_id, :value => parent_page.id

@@ -1,0 +1,36 @@
+html, body {
+  background: #ccc;
+}
+h2 {
+	background: #e2f1f9;
+	line-height: 40px;
+	margin: 0 40px 10px;	
+}
+form {
+	background: #fff;
+	width: 520px;
+	margin: 150px auto 0;
+	text-align: left;
+	padding: 40px 0;
+  border: 2px solid #198FD3;
+  -webkit-box-shadow: 0 0 15px #555;
+}
+fieldset, div, h2, p {
+	padding: 10px 40px;
+}
+label {
+	display: block;
+	width: 100px;
+}
+#remember-me label {
+  display: inline;
+}
+input {
+	font-size: 30px;
+}
+#user_email, #user_login, #user_password {
+  width: 430px;
+}
+div {
+	text-align: right;
+}
