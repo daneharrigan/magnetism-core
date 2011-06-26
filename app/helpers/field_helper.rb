@@ -3,7 +3,7 @@ module FieldHelper
     tag_name = case field.field_type
       when FieldType.text_field
         :input
-      when FieldType.large_text_field
+      when FieldType.text_area
         :textarea
       when FieldType.asset
         :asset
@@ -13,7 +13,7 @@ module FieldHelper
   end
 
   def field_class(field)
-    return 'textarea' if field.field_type == FieldType.large_text_field
+    return 'textarea' if field.field_type == FieldType.text_area
   end
 
   private

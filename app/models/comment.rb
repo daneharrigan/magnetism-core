@@ -1,14 +1,14 @@
 require 'digest/md5'
-require 'defender'
+# require 'defender'
 
 class Comment < ActiveRecord::Base
   include Liquify::Methods
   include ActionView::Helpers::SanitizeHelper
 
-  if Magnetism.defensio_key
-    include Defender::Spammable
-    configure_defender :api_key => Magnetism.defensio_key
-  end
+  # if Magnetism.defensio_key
+  #   include Defender::Spammable
+  #   configure_defender :api_key => Magnetism.defensio_key
+  # end
 
   belongs_to :page
 

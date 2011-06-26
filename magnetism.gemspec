@@ -14,19 +14,19 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "magnetism"
 
-  s.add_dependency 'rails', '~> 3.0.6'
-  s.add_dependency 'haml', '~> 3.0.23'
-  s.add_dependency 'devise', '~> 1.1.5'
+  s.add_dependency 'rails', '3.1.0.rc4'
+  s.add_dependency 'haml', '~> 3.1.2'
+  s.add_dependency 'devise', '~> 1.4.0'
   s.add_dependency 'inherited_resources', '~> 1.2.2'
-  s.add_dependency 'layout_options', '~> 0.2.1'
-  s.add_dependency 'current_object', '~> 0.2'
-  s.add_dependency 'fog', '~> 0.3.34'
-  s.add_dependency 'mini_magick', '~> 3.2'
-  s.add_dependency 'carrierwave', '~> 0.5.2'
+  s.add_dependency 'layout_options', '~> 0.2.2'
+  s.add_dependency 'current_object', '~> 0.2.1'
+  s.add_dependency 'carrierwave', '~> 0.5.4'
+  s.add_dependency 'fog', '~> 0.8.2'
+  s.add_dependency 'mini_magick', '~> 3.3'
+  s.add_dependency 'rdiscount', '~> 1.6.8'
+  #s.add_dependency 'defender', '~> 2.0.0'
+  s.add_dependency 'coderay', '~> 0.9.8'
   s.add_dependency 'liquify', '~> 0.2.5'
-  s.add_dependency 'RedCloth', '~> 4.2.7'
-  s.add_dependency 'defender', '~> 2.0.0'
-  s.add_dependency 'coderay', '~> 0.9.7'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

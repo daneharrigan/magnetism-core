@@ -1,9 +1,4 @@
 en:
-  devise:
-    failure:
-      invalid: 'Your login or password was incorrect.'
-    sessions:
-      signed_in: ''
   flash:
     actions:
       create:
@@ -15,3 +10,4 @@ en:
       destroy:
         notice: '%{resource_name} was successfully destroyed.'
         alert: '%{resource_name} could not be destroyed.'
+

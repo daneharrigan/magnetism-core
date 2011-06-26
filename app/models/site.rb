@@ -12,7 +12,7 @@ class Site < ActiveRecord::Base
   after_create :assign_key
   after_create :generate_homepage
 
-  liquify_method :name, :homepage
+  liquify_method :name, :homepage, :pages
 
   attr_accessible :name, :domain, :production, :theme_id
 

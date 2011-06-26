@@ -25,7 +25,7 @@ class Field < ActiveRecord::Base
       datum = case field_type
         when FieldType.text_field
           StringDatum.create(:value => val)
-        when FieldType.large_text_field
+        when FieldType.text_area
           TextDatum.create(:value => val)
         when FieldType.asset
           asset = Asset.create(:site => Site.current)

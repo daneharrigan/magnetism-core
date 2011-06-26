@@ -1,9 +1,9 @@
 module Admin
   class SitesController < MagnetismController
-    actions :all
+    actions :new, :edit, :create, :update, :show, :destroy
     helper_method :theme_collection
-    resources_configuration[:self][:route_prefix] = 'admin_manage'
-    layout_options :overlay => [:new, :edit]
+    defaults :route_prefix => 'admin_manage'
+    layout_options :overlay => [:new, :edit], :none => :create
 
     def show
       session[:site_id] = resource.id
@@ -12,10 +12,10 @@ module Admin
 
     def create
       create! do |success, failure|
-        success.html { redirect_to admin_manage_site_path(resource) }
+        # DH: I think I want to rethink where this goes
+        # and if creating a new site should be in an overlay
         failure.html { redirect_to admin_manage_path }
       end
-
     end
 
     def update

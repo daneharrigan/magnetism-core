@@ -11,10 +11,9 @@ require 'inherited_resources'
 require 'layout_options'
 require 'current_object'
 require 'liquify'
-require 'fog'
-require 'mini_magick'
+#require 'fog'
+#require 'mini_magick'
 require 'carrierwave'
-require 'redcloth'
 
 module Magnetism
   mattr_accessor :cache
@@ -46,4 +45,3 @@ module Magnetism
   #  self.root + '/app/views/admin/support_files/images'
   #end
 end
-
