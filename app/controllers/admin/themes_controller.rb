@@ -2,7 +2,7 @@ module Admin
   class ThemesController < MagnetismController
     actions :all
     layout_options :overlay => [:new, :edit], :none => :update
-    resources_configuration[:self][:route_prefix] = 'admin_manage'
+    defaults route_prefix: 'admin_manage'
     helper :theme
 
     def update

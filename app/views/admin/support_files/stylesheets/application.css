@@ -89,7 +89,6 @@ section {
   line-height: 50px;
   color: #fff;
   text-shadow: #666 1px 1px 3px;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -103,6 +102,10 @@ section {
 .alert {
   background: #c33;
   border-bottom: 2px solid #911;
+}
+#overlay .alert,
+#overlay .notice {
+  position: relative;
 }
 #settings {
   position: absolute;

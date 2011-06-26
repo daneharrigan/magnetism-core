@@ -1,3 +1,6 @@
+- if theme_collection.empty?
+  .alert Please create a theme first
+
 = form_for [:admin, :manage, resource] do |f|
   .large-title
     = f.label :name
@@ -6,13 +9,12 @@
     %li
       = f.label :domain
       = f.text_field :domain
-    %li
-      = f.label :theme_id
-      = f.select :theme_id, options_from_collection_for_select(theme_collection, :id, :name)
-    /%li
-    /  = f.label :production
-    /  = f.check_box :production
+    - unless theme_collection.empty?
+      %li
+        = f.label :theme_id
+        = f.select :theme_id, options_from_collection_for_select(theme_collection, :id, :name)
   .actions
     = link_to 'Cancel', '#cancel', :class => 'cancel'
-    = f.submit
+    - unless theme_collection.empty?
+      = f.submit
 
